@@ -18,6 +18,13 @@ export const existeUsername = async (username = '') => {
 export const existeNameCompany = async(nameEmpresa = '') => {
     const existingNameCompany = await Empresa.findOne({nameEmpresa});
     if(existingNameCompany) {
-        throw new Error(`The Company ${nameEmpresa} is already registered`)
+        throw new Error(`The Company ${nameEmpresa} is already REGISTERED`)
+    }
+}
+
+export const existingById = async(id = '') => {
+    const existingById = await Empresa.findOne({id});
+    if(existingById) {
+        throw new Error(`The id ${id} does EXIST in the Database`);
     }
 }

@@ -27,6 +27,15 @@ const UserAdminSchema = mongoose.Schema({
     state: {
         type: Boolean,
         default: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+
+    lastAccess: {
+        type: Date,
+        default: null
     }
 });
 

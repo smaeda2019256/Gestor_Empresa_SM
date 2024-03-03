@@ -26,3 +26,18 @@ export const empresaPost  = async (req = request, res = response) => {
         return res.status(500).json({error: 'Internal server ERROR'});
     }
 }
+
+export const empresaPut = async (req, res = response) =>  {
+    const { id } = req.params;
+    const { _id, ...resto} = req.body;
+
+    const companyL = await Empresa.findByIdAndUpdate(id, resto);
+
+    const company = req.body;
+
+    res.status(200).json({
+        msg: 'The company has been UPDATED',
+        company,
+        companyL
+    })
+}

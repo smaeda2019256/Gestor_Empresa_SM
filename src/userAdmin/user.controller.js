@@ -10,7 +10,9 @@ export const userPost = async (req, res) => {
             email, 
             password, 
             name, 
-            role 
+            role,
+            createdAt: Date.now(),
+            lastAccess: null
         });
 
         const salt = bcrypt.genSaltSync();

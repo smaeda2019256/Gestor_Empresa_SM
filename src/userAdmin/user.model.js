@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const UserAdminSchema = mongoose.Schema({
     username: {
@@ -32,11 +32,6 @@ const UserAdminSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     },
-
-    lastAccess: {
-        type: Date,
-        default: null
-    }
 });
 
 export default mongoose.model('Admin', UserAdminSchema);

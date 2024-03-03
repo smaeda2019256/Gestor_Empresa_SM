@@ -1,5 +1,5 @@
 import { response, request } from "express";
-import User from './user.model';
+import User from './user.model.js';
 import bcrypt from "bcrypt";
 
 export const userPost = async (req, res) => {
@@ -12,7 +12,6 @@ export const userPost = async (req, res) => {
             name, 
             role,
             createdAt: Date.now(),
-            lastAccess: null
         });
 
         const salt = bcrypt.genSaltSync();
@@ -33,19 +32,15 @@ export const userPost = async (req, res) => {
     
 };
 
-export const usersGet = async(req = request, res = response) => {
-    const { limite, desde } = req.query;
-    const query = { estado: true };
-    const [total, usuarios] = await Promise.all([
-        User.countDocuments(query),
-        User.find(query)
-        .skip(Number(desde))
-        .limit(Number(limite))
-    ]);
-
-    res.status(200).json({
-        msg: 'Admin users added',
-        total,
-        usuarios,
-    });
-}
+export const usersGet = async (req, res) => {
+    try {
+        const users = await User.find();
+        res.status(200).json({
+            msg: 'Users Admins Added',
+            users
+        });
+    } catch(error) {
+        console.error('ERROR - Getting users:', error);
+        return res.status(500).json({error: 'Internal server ERROR'});
+    }
+};

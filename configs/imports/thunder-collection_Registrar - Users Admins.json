@@ -1,0 +1,42 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Registrar - Users Admins",
+    "dateExported": "2024-03-04T02:27:47.862Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b37578d6-5773-436e-90f8-abb5ad0e5873",
+            "colId": "5b4c10c2-0850-45e1-835e-9bfb9537439e",
+            "containerId": "",
+            "name": "POST Users Admins",
+            "url": "http://localhost:3000/coperex/v1/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-03T05:15:34.761Z",
+            "modified": "2024-03-04T00:52:14.298Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"destrada\",\n  \"name\": \"Didiee Estrada\",\n  \"email\": \"destrada@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e4466b43-871a-476f-810f-1df8f93250ad",
+            "colId": "5b4c10c2-0850-45e1-835e-9bfb9537439e",
+            "containerId": "",
+            "name": "GET Users Admins",
+            "url": "http://localhost:3000/coperex/v1/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-03T05:20:46.300Z",
+            "modified": "2024-03-03T05:20:59.529Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

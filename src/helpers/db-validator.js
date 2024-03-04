@@ -1,5 +1,5 @@
 import User from '../userAdmin/user.model.js';
-import Empresa from '../empresa/empresa.model.js'; 
+import Empresa from '../../empresa/empresa.model.js'; 
 
  export const existeEmail = async (email = '') => {
     const existingEmail = await User.findOne({email});

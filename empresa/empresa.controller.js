@@ -119,14 +119,14 @@ export const getReportExc = async (req, res) => {
 
         { header: 'Category', 
           key: 'category', 
-          width: 20},
+          width: 30},
         
         { header: 'Company email', 
           key: 'email', 
           width: 30},
 
-        { header: 'Category', 
-          key: 'Contact Number', 
+        { header: 'Contact Number', 
+          key: 'contactPhone', 
           width: 20}
 
     ];
@@ -141,7 +141,8 @@ export const getReportExc = async (req, res) => {
     res.setHeader('Content-Disposition', 'attachment; filename="company_report.xlsx"');
 
     res.send(stream);
-    }catch(e){
+
+    }catch(error){
         console.error('ERROR - when generating Excel report: ', error);
         res.status(500).json({ message: 'ERROR - when generating Excel report' });
     }

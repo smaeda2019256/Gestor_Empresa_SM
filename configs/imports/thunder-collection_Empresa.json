@@ -1,0 +1,101 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Empresa",
+    "dateExported": "2024-03-04T02:27:53.734Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "09da8c1e-a297-4c81-813a-475a38b61e69",
+            "colId": "5c6573bd-c5a9-45fe-a029-3f74c32f5319",
+            "containerId": "",
+            "name": "POST Empresa",
+            "url": "http://localhost:3000/coperex/v1/company",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-03T19:50:57.058Z",
+            "modified": "2024-03-04T02:26:04.136Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1MWIyODA5YjgxMGI1MDNiODMwMmUiLCJpYXQiOjE3MDk1MTkxMzMsImV4cCI6MTcwOTUyMjczM30.DyoVp2PKiwoNJNn3Qu5vfA8FJuxw5DBMcJtzOXM09BU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameEmpresa\": \"HP\",\n  \"impactLevel\": \"ALTO\",\n  \"yearsOfTrajectory\": \"81 years\",\n  \"category\": \"TECNOLOGIA\",\n  \"email\": \"hpinfo@gmail.com\",\n  \"contactPhone\": \"6475-1102\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3641b49d-29d0-4cd9-bb87-613df6e987a7",
+            "colId": "5c6573bd-c5a9-45fe-a029-3f74c32f5319",
+            "containerId": "",
+            "name": "PUT Empresa",
+            "url": "http://localhost:3000/coperex/v1/company/65e5225d9aad5004d52dd219",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-03T19:58:19.653Z",
+            "modified": "2024-03-04T01:37:23.176Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1MWIzZTA5YjgxMGI1MDNiODMwMzIiLCJpYXQiOjE3MDk1MTU2OTcsImV4cCI6MTcwOTUxOTI5N30.h8d1gZp4JL3u872VXJXmfp0XL3w6oLxbFCG4WQhEbTE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameEmpresa\": \"COCA-COLA\",\n  \"impactLevel\": \"ALTO\",\n  \"yearsOfTrajectory\": \"92 years\",\n  \"category\": \"ALIMENTOS Y BEBIDAS\",\n  \"email\": \"cocacolainfo@gmail.com\",\n  \"contactPhone\": \"8102-4532\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cd0b4239-0457-4a87-863e-a4b2a5f99298",
+            "colId": "5c6573bd-c5a9-45fe-a029-3f74c32f5319",
+            "containerId": "",
+            "name": "GET Empresas",
+            "url": "http://localhost:3000/coperex/v1/company?order=yearstrajectoryAsc",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-04T00:42:11.335Z",
+            "modified": "2024-03-04T01:39:30.623Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1MWIzZTA5YjgxMGI1MDNiODMwMzIiLCJpYXQiOjE3MDk1MTU2OTcsImV4cCI6MTcwOTUxOTI5N30.h8d1gZp4JL3u872VXJXmfp0XL3w6oLxbFCG4WQhEbTE"
+                }
+            ],
+            "params": [
+                {
+                    "name": "order",
+                    "value": "yearstrajectoryAsc",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "44d222c9-e3cd-4881-b7ed-7db312abb635",
+            "colId": "5c6573bd-c5a9-45fe-a029-3f74c32f5319",
+            "containerId": "",
+            "name": "GET Reporte Excel",
+            "url": "http://localhost:3000/coperex/v1/company/report",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-04T02:03:36.434Z",
+            "modified": "2024-03-04T02:04:32.706Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1MWIzZTA5YjgxMGI1MDNiODMwMzIiLCJpYXQiOjE3MDk1MTU2OTcsImV4cCI6MTcwOTUxOTI5N30.h8d1gZp4JL3u872VXJXmfp0XL3w6oLxbFCG4WQhEbTE"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

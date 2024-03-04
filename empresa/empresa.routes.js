@@ -1,10 +1,10 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import { empresaPost, empresaPut, getEmpresa,getReportExc } from "./empresa.controller.js";
-import { existeNameCompany, existingById } from "../helpers/db-validator.js";
-import { validarCampos } from "../middlewares/validarCampos.js"; 
-import { validateJWT } from "../middlewares/validarJwt.js";
-import { validateRole } from "../middlewares/validarRole.js";
+import { existeNameCompany, existingById } from "../src/helpers/db-validator.js";
+import { validarCampos } from "../src/middlewares/validarCampos.js"; 
+import { validateJWT } from "../src/middlewares/validarJwt.js";
+import { validateRole } from "../src/middlewares/validarRole.js";
 
 const router = Router();
 

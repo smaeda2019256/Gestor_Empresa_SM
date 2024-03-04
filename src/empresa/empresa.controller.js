@@ -31,14 +31,14 @@ export const empresaPut = async (req, res = response) => {
     const { id } = req.params;
     const { _id, ...resto } = req.body;
 
-    const companyL = await Empresa.findByIdAndUpdate(id, resto);
+    const companybeforeupd = await Empresa.findByIdAndUpdate(id, resto);
 
     const company = req.body;
 
     res.status(200).json({
         msg: 'The company has been UPDATED',
         company,
-        companyL
+        companybeforeupd
     })
 }
 
@@ -64,10 +64,10 @@ export const getEmpresa = async (req, res) => {
             case 'za':
                 sortCriteria = { nameEmpresa: -1 };
                 break;
-            case 'trajectoryAsc':
+            case 'yearstrajectoryAsc':
                 sortCriteria = { yearsOfTrajectory: 1 };
                 break;
-            case 'trajectoryDesc':
+            case 'yearstrajectoryDesc':
                 sortCriteria = { yearsOfTrajectory: -1 };
                 break;
             case 'categoryAsc':

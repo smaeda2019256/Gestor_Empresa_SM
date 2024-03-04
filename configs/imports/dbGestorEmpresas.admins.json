@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "65e51b2809b810b503b8302e"
+  },
+  "username": "smaeda",
+  "name": "Santiago Maeda",
+  "email": "smaeda@gmail.com",
+  "password": "$2b$10$Is14DtWpvNNSp5axqQr4ye4spdC.G8AXAK8.xjk1hoV7OSymK6Cr6",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "createdAt": {
+    "$date": "2024-03-04T00:51:52.175Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e51b3e09b810b503b83032"
+  },
+  "username": "destrada",
+  "name": "Didiee Estrada",
+  "email": "destrada@gmail.com",
+  "password": "$2b$10$NEv5uF9BchBmWeLzE1HNfejmugspe/O1gHncm./.7DU2wcCRITEOO",
+  "role": "ADMIN_ROLE",
+  "state": true,
+  "createdAt": {
+    "$date": "2024-03-04T00:52:14.173Z"
+  },
+  "__v": 0
+}]

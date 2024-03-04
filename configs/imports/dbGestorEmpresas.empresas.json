@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "65e5225d9aad5004d52dd219"
+  },
+  "nameEmpresa": "COCA-COLA",
+  "impactLevel": "ALTO",
+  "yearsOfTrajectory": "92 years",
+  "category": "ALIMENTOS Y BEBIDAS",
+  "email": "cocacolainfo@gmail.com",
+  "contactPhone": "8102-4532",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e522cf9aad5004d52dd21f"
+  },
+  "nameEmpresa": "MEGAPACA",
+  "impactLevel": "MEDIO",
+  "yearsOfTrajectory": "30 years",
+  "category": "ROPA Y ACCESORIOS",
+  "email": "megapacainfo@gmail.com",
+  "contactPhone": "4562-3547",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e524cd5c00fe010551f0e9"
+  },
+  "nameEmpresa": "MC DONALD'S",
+  "impactLevel": "ALTO",
+  "yearsOfTrajectory": "85 years",
+  "category": "COMIDA",
+  "email": "mcdonaldsinfo@gmail.com",
+  "contactPhone": "3528-3211",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e524f85c00fe010551f0ed"
+  },
+  "nameEmpresa": "SSASA",
+  "impactLevel": "BAJO",
+  "yearsOfTrajectory": "10 years",
+  "category": "TECNOLOGIA",
+  "email": "ssasa@gmail.com",
+  "contactPhone": "9657-1125",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e5303b0137114eac05b175"
+  },
+  "nameEmpresa": "DELL",
+  "impactLevel": "ALTO",
+  "yearsOfTrajectory": "67 years",
+  "category": "TECNOLOGIA",
+  "email": "dellinfo@gmail.com",
+  "contactPhone": "1123-4980",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e5313c4332678c394018e7"
+  },
+  "nameEmpresa": "HP",
+  "impactLevel": "ALTO",
+  "yearsOfTrajectory": "81 years",
+  "category": "TECNOLOGIA",
+  "email": "hpinfo@gmail.com",
+  "contactPhone": "6475-1102",
+  "state": true,
+  "__v": 0
+}]

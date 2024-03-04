@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { empresaPost, empresaPut, getEmpresa } from "./empresa.controller.js";
+import { empresaPost, empresaPut, getEmpresa,getReportExc } from "./empresa.controller.js";
 import { existeNameCompany, existingById } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validarCampos.js"; 
 import { validateJWT } from "../middlewares/validarJwt.js";
@@ -10,6 +10,9 @@ const router = Router();
 
 
 router.get("/", [validateJWT, validateRole('ADMIN_ROLE')], getEmpresa);
+
+router.get("/report", [validateJWT, validateRole('ADMIN_ROLE')], getReportExc);
+
 router.post(
     "/",
     [

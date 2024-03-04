@@ -1,5 +1,6 @@
 import { response, request } from 'express';
 import Empresa from './empresa.model.js';
+import excel from 'exceljs';
 
 export const empresaPost = async (req = request, res = response) => {
 
@@ -94,4 +95,54 @@ export const getEmpresa = async (req, res) => {
         total,
         companys
     });
+}
+
+export const getReportExc = async (req, res) => {
+    try{
+    const company = await Empresa.find({ state: true }).lean();
+
+    const workbook = new excel.Workbook();
+    const worksheet = workbook.addWorksheet('Company');
+
+    worksheet.columns = [
+        { header: 'Company Name', 
+          key: 'nameEmpresa', 
+          width: 30},
+
+        { header: 'Impact level', 
+          key: 'impactLevel', 
+          width: 20},
+
+        { header: 'Years of Trajectory', 
+          key: 'yearsOfTrajectory', 
+          width: 20},
+
+        { header: 'Category', 
+          key: 'category', 
+          width: 20},
+        
+        { header: 'Company email', 
+          key: 'email', 
+          width: 30},
+
+        { header: 'Category', 
+          key: 'Contact Number', 
+          width: 20}
+
+    ];
+
+    company.forEach(company => {
+        worksheet.addRow(company);
+    });
+
+    const stream = await workbook.xlsx.writeBuffer();
+
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    res.setHeader('Content-Disposition', 'attachment; filename="company_report.xlsx"');
+
+    res.send(stream);
+    }catch(e){
+        console.error('ERROR - when generating Excel report: ', error);
+        res.status(500).json({ message: 'ERROR - when generating Excel report' });
+    }
 }

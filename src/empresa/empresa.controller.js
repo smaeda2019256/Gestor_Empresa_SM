@@ -58,6 +58,12 @@ export const getEmpresa = async (req, res) => {
     let sortCriteria = {};
     if (order) {
         switch (order) {
+            case 'az':
+                sortCriteria = { nameEmpresa: 1 };
+                break;
+            case 'za':
+                sortCriteria = { nameEmpresa: -1 };
+                break;
             case 'trajectoryAsc':
                 sortCriteria = { yearsOfTrajectory: 1 };
                 break;
@@ -70,12 +76,7 @@ export const getEmpresa = async (req, res) => {
             case 'categoryDesc':
                 sortCriteria = { category: -1 };
                 break;
-            case 'az':
-                sortCriteria = { nameEmpresa: 1 };
-                break;
-            case 'za':
-                sortCriteria = { nameEmpresa: -1 };
-                break;
+           
         }
     }
 

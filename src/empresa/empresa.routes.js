@@ -9,7 +9,7 @@ import { validateRole } from "../middlewares/validarRole.js";
 const router = Router();
 
 
-
+router.get("/", [validateJWT, validateRole('ADMIN_ROLE')], getEmpresa);
 router.post(
     "/",
     [
@@ -25,8 +25,6 @@ router.post(
         validarCampos
 
     ], empresaPost)
-
-router.get("/", [validateJWT, validateRole('ADMIN_ROLE')], getEmpresa);
 
 router.put(
     "/:id",

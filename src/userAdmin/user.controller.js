@@ -17,6 +17,8 @@ export const userPost = async (req, res) => {
         const salt = bcrypt.genSaltSync();
         newAdmin.password = bcrypt.hashSync(password, salt);
 
+        newAdmin.role = 'ADMIN_ROLE';
+        
         await newAdmin.save();
         
         res.status(200).json({

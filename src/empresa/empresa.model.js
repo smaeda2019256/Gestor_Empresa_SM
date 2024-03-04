@@ -25,6 +25,10 @@ const EmpresaSchema = mongoose.Schema({
     contactPhone: {
         type: String,
         required: [true, 'The company  phone number is required'],
+    },
+    state: {
+        type: Boolean,
+        default: true
     }
 });
 

@@ -21,7 +21,6 @@ const UserAdminSchema = mongoose.Schema({
     },
     role: {
         type: String,
-        default: 'ADMIN_ROLE',
         required: [true, 'The role is required'],
     },
     state: {
